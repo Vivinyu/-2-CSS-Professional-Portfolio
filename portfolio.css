@@ -1,0 +1,93 @@
+/* Basic responsive layout */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url('./edo\ castle.jpg');
+    background-size: 50%;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+nav {
+    background-color: #444;
+    padding: 0.5rem;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 2rem;
+    margin: 1rem 0;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.profile-picture {
+    max-width: 200px;
+    border-radius: 50%;
+    justify-content: center;
+}
+
+.work-samples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.work-sample {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+}
+
+.work-sample img {
+    max-width: 100%;
+    height: auto;
+}
+
+.work-sample:first-child {
+    grid-column: 1 / -1;
+}
+
+.work-sample:first-child img {
+    max-width: 50%;
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+}
